@@ -5,12 +5,13 @@ var path = require('path');
 var pi = require('pipe-iterators');
 
 module.exports = (request, response, next) => {
-  if (_.isEmpty(request.query)) {
+  let query = _.pickBy(request.query, (value) => value && _.isString(value));
+  
+  if (_.isEmpty(query)) {
     return next();
   }
 
-  let streams = _.map(request.query, jsonGetterFor(request, next));
-  let keys = _.keys(request.query);
+  let streams = _.map(query, jsonGetterFor(request, next));
   
   response.set('Content-Type', 'application/json');
   response.on('error', next);
