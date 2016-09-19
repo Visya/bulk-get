@@ -4,7 +4,7 @@
   "description": "Express.js middleware for getting multiple APIs in one go",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "node_modules/.bin/mocha"
   },
   "keywords": [
     "express",
@@ -24,5 +24,13 @@
   },
   "peerDependencies": {
     "express": "4.x.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "chai-spies": "^0.7.1",
+    "express": "^4.14.0",
+    "mocha": "^3.0.2",
+    "q": "^1.4.1"
   }
 }
