@@ -11,6 +11,9 @@ module.exports = (request, response, next) => {
 
   let streams = _.map(request.query, jsonGetterFor(request, next));
   let keys = _.keys(request.query);
+  
+  response.set('Content-Type', 'application/json');
+  response.on('error', next);
 
   pi.merge(streams)
   .pipe(pi.reduce((result, item) => _.extend(result, item)))
@@ -24,6 +27,6 @@ function fullPathFor(request, url) {
 
 function jsonGetterFor(request, next) {
   return (url, key) => fetch.get(fullPathFor(request, url))
-	  .on('error', (error) => next(error))
-	  .pipe(jsonStream.parse().on('error', (error) => next(error)));
+	  .on('error', next)
+	  .pipe(jsonStream.parse().on('error', next));
 }
