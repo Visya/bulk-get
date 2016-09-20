@@ -1,8 +1,10 @@
-let express = require('express');
-let _ = require('lodash');
+const express = require('express');
+const _ = require('lodash');
 
 module.exports = (options) => {
-  let app = express();  
+  let app = express(); 
+
+  options.next = options.next || _.noop; 
   
   if (options.middleware) {
     app.get('/', (req, res) => options.middleware(req, res, (error) => {

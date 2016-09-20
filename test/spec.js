@@ -1,8 +1,8 @@
-let chai = require('chai');
-let _ = require('lodash');
+const chai = require('chai');
+const _ = require('lodash');
 
-let bulkGet = require('..');
-let createServer = require('./server');
+const bulkGet = require('..');
+const createServer = require('./server');
 
 describe('Bulk GET middleware', () => {
   it('retrieves single resource', () => {
