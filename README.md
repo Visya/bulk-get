@@ -3,12 +3,12 @@ A simple Express.js middleware for getting multiple JSON API resources in one go
 
 # Example app
 ```javascript
-let bodyParser = require('body-parser');
-let express = require('express');
+const bodyParser = require('body-parser');
+const express = require('express');
 
-let app = express();
+const app = express();
 
-let bulkGet = require('./index.js');
+const bulkGet = require('./index.js');
 
 app.set('json spaces', 4);
 
