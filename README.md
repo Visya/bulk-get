@@ -1,4 +1,6 @@
 # bulk-get
+[![Build Status](https://travis-ci.org/Visya/bulk-get.svg?branch=master)](https://travis-ci.org/Visya/bulk-get.svg?branch=master)
+
 A simple Express.js middleware for getting multiple JSON API resources in one go
 
 # Example app
