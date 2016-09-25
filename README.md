@@ -22,7 +22,7 @@ const express = require('express');
 
 const app = express();
 
-const bulkGet = require('./index.js');
+const bulkGet = require('bulk-get');
 
 app.set('json spaces', 4);
 
