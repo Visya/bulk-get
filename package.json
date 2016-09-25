@@ -1,6 +1,6 @@
 {
   "name": "bulk-get",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Express.js middleware for getting multiple APIs in one go",
   "main": "index.js",
   "scripts": {
