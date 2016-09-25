@@ -1,10 +1,22 @@
 # bulk-get
 [![Build Status](https://travis-ci.org/Visya/bulk-get.svg?branch=master)](https://travis-ci.org/Visya/bulk-get.svg?branch=master)
 
-A simple Express.js middleware for getting multiple JSON API resources in one go
+A simple Express.js middleware for getting multiple JSON API resources in one go.
 
-# Example app
-```javascript
+## How to use
+This middleware assumes that endpoints follow REST API best practices and have wrapper object:
+```json
+/users
+
+{ "users": [] }
+
+/users/:userId
+
+{ "user": {} }
+```
+
+## Example app
+```js
 const bodyParser = require('body-parser');
 const express = require('express');
 
