@@ -9,7 +9,8 @@
   "keywords": [
     "express",
     "bulk",
-    "get"
+    "get",
+    "json"
   ],
   "author": "Visya",
   "license": "ISC",
