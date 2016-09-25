@@ -13,6 +13,7 @@
   ],
   "author": "Visya",
   "license": "ISC",
+  "repository": "Visya/bulk-get",
   "engines": {
     "node": ">=6.5.0"
   },
